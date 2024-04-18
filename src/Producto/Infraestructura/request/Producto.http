@@ -1,0 +1,17 @@
+###
+POST http://localhost:3000/Producto/agregarProducto HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_Producto":223726,
+    "nombre_Producto":"Paola",
+    "precio_Producto":2828
+}
+
+###
+DELETE http://localhost:3306/Producto/eliminarproducto HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_Producto":223272
+}

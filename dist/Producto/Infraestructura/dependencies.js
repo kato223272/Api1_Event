@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteproductoController = exports.deleteproductoCasoUso = exports.addproductoController = exports.addproductoCasoUso = exports.sqlProductoRepositorio = void 0;
+const SqlProductoRepositorio_1 = require("./SqlProductoRepositorio");
+const addProducto_Caso_Use_1 = require("../Aplicacion/addProducto.Caso.Use");
+const addProductoController_1 = require("./controller/addProductoController");
+const deleteProducto_caso_Use_1 = require("../Aplicacion/deleteProducto.caso.Use");
+const deleteProductoController_1 = require("./controller/deleteProductoController");
+exports.sqlProductoRepositorio = new SqlProductoRepositorio_1.SqlProductoRepositorio();
+exports.addproductoCasoUso = new addProducto_Caso_Use_1.AddProductoCaseUse(exports.sqlProductoRepositorio);
+exports.addproductoController = new addProductoController_1.AddProductoController(exports.addproductoCasoUso);
+exports.deleteproductoCasoUso = new deleteProducto_caso_Use_1.DeleteProductoCaseUse(exports.sqlProductoRepositorio);
+exports.deleteproductoController = new deleteProductoController_1.DeleteProductoController(exports.deleteproductoCasoUso);
